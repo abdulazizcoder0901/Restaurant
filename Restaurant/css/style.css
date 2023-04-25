@@ -1,0 +1,648 @@
+/* Main Styles */
+:root{
+  --color:#9176FF;
+  --dark-color:#2b2b2b;
+  --dark-icon-color:#fff;
+  --light-color:#f7f7f7;
+  --light-color-icon:#FFDE59;
+}
+
+.main {
+  padding: 180px 100px 120px;
+}
+
+.main-cards {
+  display: flex;
+}
+
+.main-card {
+  position: relative;
+}
+
+.main-card h1 {
+  margin: 50px 0 35px;
+  font-size: 55px;
+  color: rgb(1, 1, 39);
+}
+
+.darkmode .main-card h1{
+  color: var(--light-color);
+}
+
+.main-card p {
+  margin: 20px 0;
+  padding-right: 9rem;
+  color: rgb(110, 108, 108);
+}
+
+.darkmode .main-card p{
+  color: var(--light-color);
+}
+
+.main-social {
+  margin: 20px 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-social a {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+  background: linear-gradient(
+      to right,
+      rgb(6, 6, 224),
+      rgb(157, 8, 8),
+      rgb(4, 4, 179)
+    );
+  background-size: 200% auto;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-social a:hover {
+  transform: scale(1.1);
+  background-position: right center;
+  color: #fff;
+}
+
+.main-card__view {
+  border-radius: 75px 35px 75px 35px;
+}
+
+.main-card__dish {
+  position: absolute;
+  z-index: 1;
+  left: -10rem;
+  bottom: 10px;
+}
+
+.main-card__leaf1 {
+  position: absolute;
+  left: -150px;
+  top: -80px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.darkmode .main-card__leaf1, .darkmode .main-card__leaf2{
+  opacity: 1;
+}
+
+.main-card__leaf2 {
+  position: absolute;
+  right: -50px;
+  top: -80px;
+  z-index: -1;
+  opacity: 0.5;
+}
+/* /Main Styles */
+
+/* Special Styles */
+.special {
+  padding: 50px 0 100px;
+  background-color: rgb(245, 242, 242);
+}
+
+.darkmode .special{
+  background-color: var(--dark-color);
+}
+
+.special-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-header img {
+  opacity: 0.1;
+}
+
+.darkmode .special-header img{
+  opacity: 1;
+}
+
+.special-title h1 {
+  margin-bottom: 20px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.special-title p {
+  font-size: 17px;
+  line-height: 25px;
+  color: rgb(117, 116, 116);
+}
+
+.darkmode .special-title p{
+  color: var(--light-color);
+}
+
+.special-cards {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.special-cards .active {
+  background-color: #fff;
+}
+
+.darkmode .special-cards .active{
+  background-color: var(--dark-color);
+}
+
+.special-card {
+  position: relative;
+  width: 250px;
+  border: 1px solid darkgray;
+  border-radius: 35px 10px 35px 10px;
+  text-align: center;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.special-card:hover {
+  transform: scale(1.03);
+}
+
+.special-card img {
+  position: relative;
+  top: -90px;
+  animation: spin linear infinite;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.special-card span {
+  position: absolute;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid darkslategrey;
+}
+
+.special-card h4 {
+  padding-bottom: 15px;
+  color: rgb(4, 4, 90);
+}
+
+.special-card p {
+  padding: 10px 0;
+  color: rgb(3, 3, 80);
+}
+
+.darkmode .special-card h4, .darkmode .special-card p{
+  color: var(--light-color);
+}
+/* /Special Styles */
+
+/* Special Card Two */
+.special-cards__two {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.special-cards__two {
+  position: relative;
+}
+
+.special-card__two h1 {
+  margin: 30px 0;
+  font-size: 45px;
+}
+
+.special-card__two p {
+  padding-right: 15rem;
+  font-size: 18px;
+}
+/* /Special Card Two */
+
+/* Chef Section */
+.chef {
+  position: relative;
+  padding: 50px 0;
+}
+
+.chef-cards {
+  padding: 70px 100px;
+  display: flex;
+}
+
+.chef-onion {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.chef-card h1 {
+  margin: 100px 0 30px;
+  font-size: 40px;
+  color: rgb(2, 2, 77);
+}
+
+.darkmode .chef-card h1{
+  color: var(--light-color);
+}
+
+.chef-card p {
+  margin: 10px 15rem 100px 0;
+  font-size: 18px;
+  color: rgb(141, 138, 138);
+}
+
+.darkmode .chef-card p {
+  color: var(--light-color);
+}
+
+.chef-btn {
+  margin-top: 150px;
+}
+/* /Chef Section */
+
+/* Customer Styles*/
+.customer {
+  position: relative;
+  padding: 100px 0 0;
+  background-color: rgb(245, 242, 242);
+}
+
+.darkmode .customer{
+  background-color: var(--dark-color);
+}
+
+.customer-subtitle {
+  text-align: center;
+}
+
+.customer-subtitle h1 {
+  margin: 10px 0 25px;
+  font-size: 45px;
+}
+
+.customer-subtitle p {
+  font-size: 20px;
+  color: rgb(4, 4, 85);
+}
+
+.darkmode .customer-subtitle p{
+  color: var(--light-color);
+}
+
+.customer-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.customer-card {
+  position: relative;
+  width: 30rem;
+  padding: 0 5rem;
+  text-align: center;
+  border-radius: 5rem 2rem 5rem 2rem;
+  background-color: #fff;
+  border: 1px solid var(--light-color);
+  margin-top: 120px;
+}
+
+.darkmode .customer-card{
+  background-color: var(--dark-color);
+}
+
+.customer-card img {
+  position: relative;
+  top: -3rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.customer-rate {
+  position: absolute;
+  top: 3rem;
+  left: 10rem;
+  color: yellow;
+}
+
+.customer-card p {
+  margin-bottom: 2rem;
+  color: rgb(156, 154, 154);
+}
+
+.customer-card h4 {
+  margin: 5px 0;
+}
+
+.customer > img {
+  position: absolute;
+  right: 0;
+  opacity: 0.2;
+}
+
+.darkmode .customer > img{
+  opacity: .5;
+}
+/* /Customer Styles */
+
+/* View Styles */
+.view{
+  margin: 50px 0;
+  text-align: center;
+}
+
+.view img{
+  border-radius: 50px;
+}
+/* View Styles */
+
+/* Media Styles */
+@media (max-width: 1200px) {
+  /* Main Styles */
+  .main {
+    margin-bottom: 100px;
+  }
+
+  .main-card h1 {
+    font-size: 50px;
+  }
+
+  .main-card p {
+    padding-right: 2rem;
+  }
+  /* /Main Styles */
+
+  /* Special Styles */
+  .special-cards {
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .special-card {
+    margin-bottom: 100px;
+  }
+  /* /Special Styles */
+
+  /* Special Card Two Styles */
+  .special-cards__two {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .special-card__two {
+    text-align: center;
+  }
+
+  .special-card__two p {
+    padding-right: 0;
+  }
+  /* /Special Card Two Styles */
+
+  /* Chef Styles */
+  .chef-cards {
+    padding: 70px 50px;
+  }
+
+  .chef-onion {
+    width: 15rem;
+  }
+
+  .chef-card p {
+    margin-right: 0;
+  }
+  /* /Chef Styles */
+
+  /* View Styles */
+  .view img{
+    max-width: 60rem;
+  }
+  /* /View Styles */
+}
+
+@media (max-width: 991px) {
+  /* Main Styles */
+  .main {
+      padding: 150px 0 50px;
+  }
+
+  .main-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-card {
+    padding: 0 50px;
+    text-align: center;
+  }
+
+  .main-card h1 {
+    margin: 35px 0;
+  }
+
+  .main-card p {
+    margin: 10px 0;
+    padding-right: 0;
+  }
+
+  .main-social {
+    margin: 25px 0;
+    justify-content: center;
+  }
+
+  .main-card__dish {
+    left: 8rem;
+    bottom: -100px;
+  }
+  /* /Main Styles */
+
+  /* Special Styles */
+  .special {
+    padding: 30px 0;
+  }
+
+  .special-header img {
+    width: 100px;
+  }
+
+  .special-title h1 {
+    font-size: 40px;
+  }
+
+  .special-title p {
+    text-align: center;
+  }
+
+  .special-cards {
+    padding-bottom: 0;
+  }
+  /* /Special Styles */
+
+  /* Special Card Two Styles */
+  .special-card__two img {
+    width: 35rem;
+  }
+  /* /Special Card Two Styles */
+
+  /* Chef Styles */
+  .chef-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chef-card {
+    text-align: center;
+  }
+
+  .chef-card p {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .chef-btn {
+    margin-top: 40px;
+  }
+  /* /Chef Styles */
+
+  /* Customer Styles */
+  .customer-cards {
+    flex-wrap: wrap;
+  }
+  /* /Customer Styles */
+
+  /* View Styles */
+  .view img{
+    width: 45rem;
+  }
+  /* /View Styles */
+}
+
+@media (max-width: 767px) {
+  /* Main Styles */
+  .main-card__leaf1,
+  .main-card__leaf2 {
+    display: none;
+  }
+  /* /Main Styles */
+
+  /* Special Card Two Styles */
+  .special-card__two img {
+    width: 30rem;
+  }
+
+  .special-card__two h1 {
+    font-size: 40px;
+  }
+  /* /Special Card Two Styles */
+
+  /* Customer Styles */
+  .customer-subtitle h1 {
+    font-size: 40px;
+  }
+  /* /Customer Styles */
+
+  /* View Styles */
+  .view img{
+    width: 35rem;
+  }
+  /* /View Styles */
+}
+
+@media (max-width: 576px) {
+  /* Main Styles */
+  .main-card {
+    padding: 0 10px;
+  }
+
+  .main-card h1 {
+    font-size: 35px;
+  }
+
+  .main-card__view {
+    width: 300px;
+  }
+
+  .main-card__dish {
+    left: 4rem;
+    width: 200px;
+  }
+  /* /Main Styles */
+
+  /* Special Styles */
+  .special-header img {
+    display: none;
+  }
+
+  .special-title h1 {
+    font-size: 35px;
+  }
+
+  .special-card {
+    width: 300px;
+  }
+
+  .special-card span {
+    right: 40px;
+  }
+  /* /Special Styles */
+
+  /* Special Card Two Styles */
+  .special-card__two img {
+    width: 20rem;
+  }
+
+  .special-card__two h1 {
+    font-size: 35px;
+  }
+  /* /Special Card Two Styles */
+
+  /* Chef Styles */
+  .chef {
+    padding: 15px 0;
+  }
+
+  .chef-onion {
+    display: none;
+  }
+
+  .chef-cards {
+    padding: 50px 0;
+  }
+
+  .chef-card h1 {
+    margin-top: 10px;
+  }
+
+  .chef-image {
+    width: 18rem;
+  }
+  /* /Chef Styles */
+
+  /* View Styles */
+  .view img{
+    width: 25rem;
+  }
+  /* /View Styles */
+}
+
+@media (max-width:480px){
+   /* View Styles */
+   .view img{
+    width: 20rem;
+  }
+  /* /View Styles */
+}
+/* /Media Styles */
